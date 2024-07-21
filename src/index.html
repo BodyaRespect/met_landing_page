@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MET landing</title>
     <link
-    rel="icon"
-    type="image/x-icon"
-    href="images/favicon.ico"
+      rel="icon"
+      type="image/x-icon"
+      href="images/favicon.ico"
     >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin="anonymous"
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
     >
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/style.scss">
+    <link rel="stylesheet" href="styles/style.scss">
     <script src="scripts/main.js" defer></script>
   </head>
   <body class="page__body">
@@ -24,15 +24,19 @@
     <header class="header">
 
       <div class="top-bar">
-        <a href="#" class="top-bar__logo">
+        <a
+        href="#"
+        class="top-bar__logo"
+        alt="logo"
+        >
           <img
-            src="images/logo.png"
-            class="logo"
-            alt="Logo icon"
+          src="images/logo-3x.png"
+          class="logo"
+          alt="Logo icon"
           >
         </a>
         <div class="top-bar__icons">
-          <a href="tel:+1212-535-7710" class="icon icon--phone"></a>
+          <a href="tel:+1 212-535-7710" class="icon icon--phone"></a>
           <a href="#menu" class="icon icon--menu"></a>
         </div>
       </div>
@@ -48,9 +52,13 @@
 
     <aside class="menu page__menu" id="menu">
       <div class="top-bar menu__top">
-        <a href="#" class="top-bar__logo">
+        <a
+        href="#"
+        class="top-bar__logo"
+        alt="logo"
+        >
           <img
-          src="images/logo.svg"
+          src="images/logo.png"
           class="logo"
           alt="Logo icon"
           >
@@ -83,14 +91,14 @@
 
         <div class="menu__bottom">
           The Met Fifth Avenue
-          <a href="tel:+1212-535-7710" class="menu__phone-number">
+          <a href="tel:+1 212-535-7710" class="menu__phone-number">
             +1 212-535-7710
           </a>
           The Met Cloisters
-          <a href="tel:+1212-923-3700" class="menu__phone-number">
+          <a href="tel:+1 212-923-3700" class="menu__phone-number">
             +1 212-923-3700
           </a>
-          <a href="tel:+1212-923-3700" class="menu__call-to-order">
+          <a href="tel:+1 212-923-3700" class="menu__call-to-order">
             call to order
           </a>
         </div>
@@ -216,11 +224,9 @@
             </div>
           </div>
         </div>
-        <a href="#contacts" class="section-button--link">
-          <button class="section-button">
-            View all exhibitions
-          </button>
-        </a>
+        <button class="section-button">
+          View all exhibitions
+        </button>
       </section>
 
       <section class="section" id="explore">
@@ -290,13 +296,13 @@
                 <div class="section-contact">
                   Phone
                 </div>
-                <a href="tel:+1212-535-7710" class="number">+1 212-535-7710</a>
+                <h3>+1 212-535-7710</h3>
                 <div class="section-contact">
                   Address
                 </div>
                 <h3>
                   <a
-                  href="https://www.google.com/maps/search/?api=1&query=1000+Fifth+Avenue+New+York%2C+NY+10028"
+                  href="#"
                   target="_blank"
                   class="section-address"
                   >
@@ -305,17 +311,17 @@
                 </h3>
               </div>
               <div class="section-contact-block">
-                <h2>The Met Cloisters</h2>
+                <h2>The Met Fifth Avenue</h2>
                 <div class="section-contact">
                   Phone
                 </div>
-                <a href="tel:+1212-923-3700" class="number">+1 212-923-3700</a>
+                <h3>+1 212-923-3700</h3>
                 <div class="section-contact">
                   Address
                 </div>
                 <h3>
                   <a
-                  href="https://www.google.com/maps/search/?api=1&query=99+Margaret+Corbin+Drive+Fort+Tryon+Park+New+York%2C+NY+10040"
+                  href="#"
                   target="_blank"
                   class="section-address"
                   >
@@ -337,17 +343,15 @@
                   name="name"
                   placeholder="name"
                   class = "section-field section-input"
-                  autocomplete="off"
                   required
                 >
               </label>
               <label>
                 <input
-                  type="email"
+                  type="text"
                   name="email"
                   placeholder="email"
                   class = "section-field section-input"
-                  autocomplete="off"
                   required
                 >
               </label>
@@ -355,20 +359,18 @@
                 <textarea
                   name="info"
                   class = "section-textarea section-input"
-                  autocomplete="off"
                   placeholder="message"
                   required
                 ></textarea>
               </label>
-              <label>
-                <button
-                  class="section-button"
-                  id="contact-button"
-                  type="submit"
-                >
+              <button
+                class="section-button"
+                id="contact-button"
+                type="submit"
+                disabled
+              >
                 Send
-                </button>
-              </label>
+              </button>
             </form>
           </div>
 
