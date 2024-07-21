@@ -105,7 +105,7 @@ h3 {
     font-weight: 700;
     margin-top: 32px;
     text-align: left;
-    justify-content: start;
+    justify-content: center;
 
     @include OnTablet {
       display: flex;
@@ -166,6 +166,7 @@ h3 {
   &-photo {
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
     gap: 20px;
 
     @include OnTablet {
@@ -178,6 +179,11 @@ h3 {
 
     &--image {
       width: 280px;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        transform: scale(1.07);
+      }
 
       @include OnTablet {
         width: 392px;
@@ -191,6 +197,11 @@ h3 {
     &--small {
       width: 88px;
       height: 88px;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        transform: scale(1.07);
+      }
 
       @include OnTablet {
         width: 288px;
@@ -205,6 +216,11 @@ h3 {
       &_third {
         width: 88px;
         height: 88px;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+          transform: scale(1.07);
+        }
 
         @include OnTablet {
           display: none;
@@ -221,6 +237,11 @@ h3 {
     &--big {
       width: 130px;
       height: 130px;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        transform: scale(1.07);
+      }
 
       @include OnTablet {
         width: 184px;
@@ -238,6 +259,11 @@ h3 {
       height: 130px;
       object-fit: cover;
       object-position: 20%;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        transform: scale(1.07);
+      }
 
       @include OnTablet {
         width: 392px;
@@ -256,6 +282,11 @@ h3 {
         height: 130px;
         object-fit: cover;
         object-position: 100%;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+          transform: scale(1.07);
+        }
 
         @include OnTablet {
           width: 392px;
@@ -277,6 +308,7 @@ h3 {
     font-size: 16px;
     font-weight: 400;
     line-height: 27px;
+    color: $main-text-color;
   }
 
   &--date-title {
@@ -284,6 +316,7 @@ h3 {
     font-size: 16px;
     line-height: 27px;
     letter-spacing: 0;
+    font-weight: 700;
     color: $accent-color;
   }
 
@@ -336,20 +369,25 @@ h3 {
   &-address {
     text-decoration: none;
     color: $main-text-color;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      color: red;
+    }
   }
 
   &-form {
     box-sizing: border-box;
-    width: auto;
+    max-width: 280px;
     height: auto;
     margin-top: 48px;
 
     @include OnTablet {
-      min-width: 288px;
+      max-width: 288px;
     }
 
     @include OnDesktop {
-      min-width: 411px;
+      max-width: 411px;
     }
   }
 
@@ -362,8 +400,9 @@ h3 {
     box-sizing: border-box;
     border: 0;
     background-color: #f8f8fa;
-    width: 100%;
+    width: 280px;
     padding: 14px 10px;
+    outline: none;
     cursor: pointer;
 
     &::-webkit-input-placeholder {
@@ -372,18 +411,27 @@ h3 {
 
     &:hover::-webkit-input-placeholder {
       color: $placeholder-hover;
-      font-weight: 500;
+      font-weight: 700;
+    }
+
+    @include OnTablet {
+      width: 288px;
+    }
+
+    @include OnDesktop {
+      width: 411px;
     }
   }
 
   &-field {
-    height: 48px;
     margin-bottom: 8px;
+    height: 48px;
   }
 
   &-textarea {
     margin-bottom: 32px;
-    height: 140px;
+    height: 144px;
+    resize: none;
   }
 
   &-button {
@@ -400,7 +448,13 @@ h3 {
     margin: auto;
     padding: 0;
     border: 0;
+    transition: all 0.5s;
+    transition-timing-function: linear;
     cursor: pointer;
+
+    &--link {
+      color: #fff;
+    }
 
     @include OnTablet {
       width: 392px;
@@ -411,6 +465,7 @@ h3 {
     }
 
     &:hover {
+      transform: scale(1.1);
       background-color: $button-hover;
     }
 
@@ -443,6 +498,15 @@ h3 {
   margin-top: 48px;
   text-align: left;
   display: inline-block;
+}
+
+#now-on-view {
+  align-content: stretch;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 100px 0 0;
+  align-items: center;
 }
 
 #smallpic {
@@ -484,11 +548,29 @@ h3 {
 
 #contact-button {
   width: 100%;
+
+  &:hover {
+    transform: none;
+    background-color: $button-hover;
+  }
+}
+
+.number {
+  transition: all 0.5s ease-in-out;
+  font-size: 16px;
+  line-height: 27px;
+  color: $main-text-color;
+  text-decoration: none;
+
+  &:hover {
+    color: red;
+  }
 }
 
 .fourth-content {
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  justify-content: center;
   gap: 0;
   box-sizing: border-box;
   font-family: "Cinzel", serif;
@@ -502,12 +584,12 @@ h3 {
   @include OnTablet {
     gap: 48px;
     flex-direction: row;
-    justify-content: center;
+    align-items: baseline;
   }
 
   @include OnDesktop {
     gap: 111px;
     flex-direction: row;
-    justify-content: center;
+    align-items: baseline;
   }
 }
