@@ -45,6 +45,8 @@ h3 {
   margin-top: 100px;
   padding: 0 20px;
   text-align: center;
+  max-width: 1060px;
+  margin: 0 auto;
 
   @include OnTablet {
     padding: 0 72px;
@@ -520,7 +522,6 @@ h3 {
   display: flex;
   flex-direction: column;
   padding: 0;
-  margin: 100px 0 0;
   align-items: center;
 }
 
